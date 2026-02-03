@@ -6,7 +6,7 @@ describe("Todo API", () => {
     const res = await request(app).post("/todos").send({ text: "Learn CI" });
 
     expect(res.statusCode).toBe(201);
-    expect(res.body.text).toBe("BROKEN");
+    expect(res.body.text).toBe("Learn CI");
   });
 
   it("lists todos", async () => {
